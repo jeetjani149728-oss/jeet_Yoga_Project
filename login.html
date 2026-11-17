@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log In or Join — RadiantRoots</title>
+<meta name="description" content="Log in to your RadiantRoots account or create a new one to start booking classes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="auth-shell">
+  <!-- Visual side -->
+  <div class="auth-visual">
+    <img src="images/hero-stretch-trio.jpg" alt="Students practicing yoga together at RadiantRoots studio">
+    <a href="index.html" class="back-home">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Back to RadiantRoots
+    </a>
+    <div class="quote-block" style="text-align:left; max-width:420px;">
+      <q>Yoga teaches us to cure what need not be cured, to tolerate what cannot be cured, and to forget what must be forgotten.</q>
+      <cite style="text-align:left;">— Shared each morning in class</cite>
+    </div>
+  </div>
+
+  <!-- Form side -->
+  <div class="auth-form-wrap">
+    <div class="auth-form">
+      <a href="index.html" class="brand" style="display:block; margin-bottom:2.2rem;">Radiant<span>Roots</span></a>
+
+      <div class="auth-tabs">
+        <button class="active" data-target="panel-login" type="button">Log In</button>
+        <button data-target="panel-signup" type="button">Create Account</button>
+      </div>
+
+      <!-- LOGIN PANEL -->
+      <div class="auth-panel active" id="panel-login">
+        <h2 style="font-size:1.7rem;">Welcome back.</h2>
+        <p style="margin-top:.5rem; font-size:.92rem;">Log in to book classes and manage your schedule.</p>
+
+        <div class="auth-alert" id="loginAlert"></div>
+
+        <form id="loginForm" style="margin-top:1.8rem;" novalidate>
+          <div class="form-floating-rr">
+            <label for="login-email">Email</label>
+            <input class="form-control-rr" id="login-email" type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-floating-rr">
+            <label for="login-password">Password</label>
+            <div style="position:relative;">
+              <input class="form-control-rr" id="login-password" type="password" placeholder="••••••••" required style="padding-right:4.2rem;">
+              <button type="button" class="pw-toggle" data-for="#login-password" style="position:absolute; right:.9rem; top:50%; transform:translateY(-50%); background:none; border:none; font-size:.74rem; font-weight:700; color:var(--navy); cursor:pointer;">Show</button>
+            </div>
+          </div>
+          <div class="form-row-between">
+            <label class="check-row"><input type="checkbox"> Remember me</label>
+            <a href="#">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn-rr btn-gold btn-block-rr">Log In</button>
+        </form>
+
+        <div class="divider-or">or continue with</div>
+        <div class="social-auth">
+          <button type="button" onclick="window.rrToast('Google sign-in isn\'t connected in this demo')">Google</button>
+          <button type="button" onclick="window.rrToast('Apple sign-in isn\'t connected in this demo')">Apple</button>
+        </div>
+      </div>
+
+      <!-- SIGNUP PANEL -->
+      <div class="auth-panel" id="panel-signup">
+        <h2 style="font-size:1.7rem;">Start your practice.</h2>
+        <p style="margin-top:.5rem; font-size:.92rem;">Create a free account — your first class is on us.</p>
+
+        <div class="auth-alert" id="signupAlert"></div>
+
+        <form id="signupForm" style="margin-top:1.8rem;" novalidate>
+          <div class="form-floating-rr">
+            <label for="signup-name">Full Name</label>
+            <input class="form-control-rr" id="signup-name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-floating-rr">
+            <label for="signup-email">Email</label>
+            <input class="form-control-rr" id="signup-email" type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-floating-rr">
+            <label for="signup-password">Password</label>
+            <div style="position:relative;">
+              <input class="form-control-rr" id="signup-password" type="password" placeholder="At least 8 characters" required style="padding-right:4.2rem;">
+              <button type="button" class="pw-toggle" data-for="#signup-password" style="position:absolute; right:.9rem; top:50%; transform:translateY(-50%); background:none; border:none; font-size:.74rem; font-weight:700; color:var(--navy); cursor:pointer;">Show</button>
+            </div>
+          </div>
+          <div class="form-row-between" style="justify-content:flex-start;">
+            <label class="check-row"><input type="checkbox" required> I agree to the studio's terms &amp; waiver</label>
+          </div>
+          <button type="submit" class="btn-rr btn-gold btn-block-rr">Create Account</button>
+        </form>
+
+        <div class="divider-or">or sign up with</div>
+        <div class="social-auth">
+          <button type="button" onclick="window.rrToast('Google sign-in isn\'t connected in this demo')">Google</button>
+          <button type="button" onclick="window.rrToast('Apple sign-in isn\'t connected in this demo')">Apple</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
